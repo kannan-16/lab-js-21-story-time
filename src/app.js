@@ -11,6 +11,7 @@ function moreAboutHome(address, distanceFromTown, hasNeighbours) {
 //Check if the data given is of the right type
 //parents = String, noOfSiblings = Number, isNuclearFamily = Boolean
 
+//type code here
 
 //Trial 3:
 //Lily is suspicious about Karen's new friend
