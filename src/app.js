@@ -2,23 +2,38 @@
 //We've got some basic info about Karen's home
 //Debug the type of data provided
 //Return the types concatenated in a single variable
+
+/*
+/*
+/* @Author - Kannan
+*/
 function moreAboutHome(address, distanceFromTown, hasNeighbours) {
     var con_datatypes = typeof(address)+typeof(distanceFromTown)+typeof(hasNeighbours);
     return con_datatypes;
 }
 
+
 //Trial 2:
 //Check if the data given is of the right type
 //parents = String, noOfSiblings = Number, isNuclearFamily = Boolean
 
-//type code here
+function moreAboutKaren(parents,noOfSiblings,isNuclearFamily){
+    var check = (typeof parents == "string"&&typeof noOfSiblings == "number"&&typeof isNuclearFamily == "boolean")?true: false;
+    return check;
+ }
 
 //Trial 3:
 //Lily is suspicious about Karen's new friend
 //Karen tells her friend's age and even writes it down
 //Check which one those is not a number (NaN) and return that value
 
-
+function doesFriendExist(ageInText, ageInNumber) {
+    if(isNaN(ageInText) == true) {
+        return ageInText
+    }
+    else
+        return ageInNumber;
+}
 
 //Trial 4:
 //Lily gave Karen x sweets
@@ -27,10 +42,26 @@ function moreAboutHome(address, distanceFromTown, hasNeighbours) {
 //Her friend divided the remaining sweets into 2 parts for each
 //How many sweets did her friend get to eat?
 
+function sweetTooth(totalNoOfSweets, sweetsConsumedByKaren, sweetsConsumedInNMeters, metersToTravel) {
+    if(typeof(totalNoOfSweets) == "number" && typeof(sweetsConsumedByKaren) == "number"&&(typeof(sweetsConsumedInNMeters)=="number")&&(typeof(metersToTravel)=="number")) {
+        return (((totalNoOfSweets-(sweetsConsumedByKaren+sweetsConsumedInNMeters*metersToTravel))/2));
+    }
+    return "No sweets for Karen's friend";
+    
+}
+
 //Trial 5:
 //As Lily moves closer, it gets colder. She checks the temperature on her mobile
 //It only shows in fahrenheit. Convert the data to celsius and return it.
-
+function convertToCelsius(fahrenheit) {
+    
+    if(typeof(fahrenheit) == "number") {
+        return ((fahrenheit - 32)*(5/9));
+    }
+    else {
+        return "Technical Error!";
+    }
+}
 
 
 //Trial 6:
